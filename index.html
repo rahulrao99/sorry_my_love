@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I'm Sorry ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+}
+
+.card{
+    width:90%;
+    max-width:450px;
+    background:white;
+    border-radius:25px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    animation:fadeIn 1.5s ease;
+}
+
+h1{
+    color:#ff4d6d;
+    margin-bottom:20px;
+}
+
+p{
+    color:#444;
+    font-size:18px;
+    line-height:1.8;
+}
+
+button{
+    margin-top:30px;
+    padding:14px 28px;
+    border:none;
+    background:#ff4d6d;
+    color:white;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:17px;
+}
+
+button:hover{
+    background:#ff2d55;
+}
+
+#hidden{
+    display:none;
+    margin-top:25px;
+    color:#ff2d55;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.heart{
+    position:absolute;
+    color:#ff4d6d;
+    animation:float 6s linear infinite;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;transform:scale(.8);}
+    to{opacity:1;transform:scale(1);}
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-120px);
+        opacity:0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h1>I'm Really Sorry ❤️</h1>
+
+<p>
+My Love,<br><br>
+
+I know I've hurt you, and seeing you cry because of my mistakes is the hardest thing for me. You deserve love, care, and peace—not tears.
+
+I can't change what happened, but I promise to learn from it and become a better person for us. I never want to be the reason behind your sadness again.
+
+Please forgive me when your heart is ready. I love you more than words can ever explain. ❤️
+</p>
+
+<button onclick="showLove()">
+Tap Here ❤️
+</button>
+
+<div id="hidden">
+Forever Yours ❤️<br>
+Rahul
+</div>
+
+</div>
+
+<script>
+function showLove(){
+document.getElementById("hidden").style.display="block";
+}
+
+for(let i=0;i<30;i++){
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(15+Math.random()*25)+"px";
+heart.style.animationDuration=(4+Math.random()*4)+"s";
+document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
