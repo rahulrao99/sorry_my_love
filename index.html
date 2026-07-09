@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -139,4 +139,952 @@ document.body.appendChild(heart);
 
 
 
+ -->
 
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>I'm Sorry ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:linear-gradient(-45deg,
+#ffd6e7,
+#ffc1d6,
+#ffe6ef,
+#ffd1dc);
+
+background-size:400% 400%;
+animation:bgMove 12s ease infinite;
+
+}
+
+@keyframes bgMove{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+.screen{
+
+position:absolute;
+width:100%;
+height:100%;
+display:none;
+
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+padding:20px;
+
+}
+
+.active{
+
+display:flex;
+
+animation:fade .8s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+transform:scale(.9);
+
+}
+
+to{
+
+opacity:1;
+transform:scale(1);
+
+}
+
+}
+
+.card{
+
+width:90%;
+max-width:700px;
+
+background:rgba(255,255,255,.35);
+
+backdrop-filter:blur(20px);
+
+border-radius:30px;
+
+padding:40px;
+
+box-shadow:0 20px 50px rgba(0,0,0,.2);
+
+text-align:center;
+
+}
+
+button{
+
+padding:15px 35px;
+
+font-size:18px;
+
+border:none;
+
+cursor:pointer;
+
+border-radius:50px;
+
+background:#ff4d6d;
+
+color:white;
+
+margin-top:30px;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+background:#ff2d55;
+
+}
+
+h1{
+
+color:#ff2d55;
+
+margin-bottom:20px;
+
+font-size:42px;
+
+}
+
+p{
+
+font-size:20px;
+
+line-height:1.8;
+
+color:#444;
+
+}
+
+.loadingHeart{
+
+font-size:80px;
+
+animation:pulse 1s infinite;
+
+}
+
+@keyframes pulse{
+
+50%{
+
+transform:scale(1.2);
+
+}
+
+}
+
+#loading h2{
+
+margin-top:20px;
+color:white;
+font-size:35px;
+
+}
+
+.teddy{
+
+font-size:150px;
+
+animation:bounce 2s infinite;
+
+}
+
+@keyframes bounce{
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+}
+
+.board{
+
+margin-top:-20px;
+
+background:white;
+
+padding:15px 35px;
+
+border-radius:20px;
+
+font-size:30px;
+
+font-weight:bold;
+
+color:#ff2d55;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+#letter{
+
+white-space:pre-wrap;
+
+font-size:20px;
+
+line-height:1.9;
+
+text-align:left;
+
+min-height:320px;
+
+}
+
+.heart{
+
+position:absolute;
+
+bottom:-50px;
+
+animation:float linear infinite;
+
+opacity:.8;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0) rotate(0deg);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-120vh) rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+.petal{
+
+position:absolute;
+
+top:-100px;
+
+animation:petalFall linear infinite;
+
+}
+
+@keyframes petalFall{
+
+100%{
+
+transform:
+
+translateY(120vh)
+rotate(360deg);
+
+}
+
+}
+
+.cloud{
+
+position:absolute;
+
+font-size:70px;
+
+opacity:.5;
+
+animation:cloudMove linear infinite;
+
+}
+
+@keyframes cloudMove{
+
+0%{
+
+left:-200px;
+
+}
+
+100%{
+
+left:120%;
+
+}
+
+}
+
+#noBtn{
+
+position:relative;
+
+}
+
+#funny{
+
+margin-top:20px;
+
+font-size:22px;
+
+color:#ff2d55;
+
+font-weight:600;
+
+}
+
+.finalText{
+
+font-size:24px;
+
+line-height:2;
+
+}
+
+.glow{
+
+animation:glow 2s infinite;
+
+}
+
+@keyframes glow{
+
+50%{
+
+text-shadow:
+
+0 0 15px #ff2d55,
+
+0 0 25px #ff2d55,
+
+0 0 40px pink;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Loading Screen -->
+
+<div id="loading" class="screen active">
+
+<div class="loadingHeart">
+❤️
+</div>
+
+<h2>Loading Love...</h2>
+
+</div>
+
+<!-- Teddy Screen -->
+
+<div id="home" class="screen">
+
+<div class="card">
+
+<div class="teddy">
+
+🧸
+
+</div>
+
+<div class="board">
+
+I'M SORRY ❤️
+
+</div>
+
+<h1>
+
+Can You Spare Me One Minute?
+
+</h1>
+
+<p>
+
+I have something from my heart...
+
+Just one click away.
+
+🥺❤️
+
+</p>
+
+<button onclick="openLetter()">
+
+Open My Heart ❤️
+
+</button>
+
+</div>
+
+</div>
+
+<!-- Letter Screen -->
+
+<div id="letterScreen" class="screen">
+
+<div class="card">
+
+<h1>
+
+My Love ❤️
+
+</h1>
+
+<div id="letter">
+
+</div>
+
+<button onclick="question()">
+
+Continue ❤️
+
+</button>
+
+</div>
+
+</div>
+
+<!-- Question Screen -->
+
+<div id="questionScreen" class="screen">
+
+<div class="card">
+
+<h1>
+
+Will You Forgive Me?
+
+🥺
+
+</h1>
+
+<button onclick="yesAnswer()">
+
+YES ❤️
+
+</button>
+
+<button id="noBtn">
+
+NO 💔
+
+</button>
+
+<div id="funny">
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Final Screen -->
+
+<div id="finalScreen" class="screen">
+
+<div class="card">
+
+<h1 class="glow">
+
+I LOVE YOU ❤️
+
+</h1>
+
+<p class="finalText">
+
+Coming in Part 2...
+
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+// =========================
+// Loading Screen
+// =========================
+
+setTimeout(() => {
+
+document.getElementById("loading").classList.remove("active");
+document.getElementById("home").classList.add("active");
+
+},2500);
+
+
+// =========================
+// Floating Hearts
+// =========================
+
+function createHeart(){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(15+Math.random()*35)+"px";
+
+heart.style.animationDuration=(5+Math.random()*5)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},10000);
+
+}
+
+setInterval(createHeart,350);
+
+
+// =========================
+// Falling Rose Petals
+// =========================
+
+function createPetal(){
+
+let petal=document.createElement("div");
+
+petal.className="petal";
+
+petal.innerHTML="🌸";
+
+petal.style.left=Math.random()*100+"vw";
+
+petal.style.fontSize=(18+Math.random()*20)+"px";
+
+petal.style.animationDuration=(8+Math.random()*6)+"s";
+
+document.body.appendChild(petal);
+
+setTimeout(()=>{
+
+petal.remove();
+
+},15000);
+
+}
+
+setInterval(createPetal,700);
+
+
+// =========================
+// Moving Clouds
+// =========================
+
+function createCloud(){
+
+let cloud=document.createElement("div");
+
+cloud.className="cloud";
+
+cloud.innerHTML="☁️";
+
+cloud.style.top=Math.random()*35+"%";
+
+cloud.style.animationDuration=(35+Math.random()*20)+"s";
+
+document.body.appendChild(cloud);
+
+setTimeout(()=>{
+
+cloud.remove();
+
+},60000);
+
+}
+
+createCloud();
+
+createCloud();
+
+setInterval(createCloud,12000);
+
+
+// =========================
+// Open Letter
+// =========================
+
+function openLetter(){
+
+document.getElementById("home").classList.remove("active");
+
+document.getElementById("letterScreen").classList.add("active");
+
+typeLetter();
+
+}
+
+
+// =========================
+// Typewriter Message
+// =========================
+
+const message=`My Love ❤️,
+
+I know I made mistakes.
+
+Seeing tears in your eyes because of me
+is something I never want again.
+
+You deserve smiles,
+warm hugs,
+late-night laughs,
+and endless happiness.
+
+Not pain.
+
+Not sadness.
+
+Not disappointment.
+
+I can't change yesterday...
+
+But I promise to make tomorrow
+more beautiful than today.
+
+Every mistake has taught me
+how precious you are.
+
+You are my peace,
+my happiness,
+my safe place,
+and my favorite person.
+
+If I could turn back time,
+I'd fix everything.
+
+But since I can't...
+
+I'll spend every single day
+making it up to you.
+
+Please forgive me...
+
+when your heart is ready.
+
+I Love You
+More Than Words Can Ever Explain.
+
+❤️`;
+
+let index=0;
+
+function typeLetter(){
+
+let box=document.getElementById("letter");
+
+box.innerHTML="";
+
+index=0;
+
+let typing=setInterval(()=>{
+
+box.innerHTML+=message.charAt(index);
+
+index++;
+
+box.scrollTop=box.scrollHeight;
+
+if(index>=message.length){
+
+clearInterval(typing);
+
+}
+
+},28);
+
+}
+
+
+// =========================
+// Continue Button
+// =========================
+
+function question(){
+
+document.getElementById("letterScreen").classList.remove("active");
+
+document.getElementById("questionScreen").classList.add("active");
+
+}
+// =========================
+// Funny Messages
+// =========================
+
+const funnyMessages = [
+
+"🥺 Are you really sure?",
+
+"🍫 I'll buy you chocolates!",
+
+"🌹 I'll bring your favorite flowers!",
+
+"😭 Please don't break my tiny heart.",
+
+"🥹 Just one more chance?",
+
+"❤️ The YES button is feeling lonely.",
+
+"😅 I already started becoming better!",
+
+"🙈 Oops! Wrong button 😂",
+
+"💖 I know your heart is kind.",
+
+"🥰 Pretty please?",
+
+"🤭 Try clicking NO again... I dare you.",
+
+"😂 Error 404 : NO button not working.",
+
+"💘 Destiny says click YES.",
+
+"🌈 Love always wins.",
+
+"💝 I'll never stop loving you.",
+
+"🐻 Teddy is crying now.",
+
+"🍕 I'll share my pizza forever.",
+
+"🎁 Free unlimited hugs included.",
+
+"💍 My heart already chose you.",
+
+"❤️ I knew you'd smile reading this."
+
+];
+
+let funnyIndex = 0;
+
+
+// =========================
+// Escaping NO Button
+// =========================
+
+const noBtn = document.getElementById("noBtn");
+
+noBtn.addEventListener("mouseover", moveButton);
+
+noBtn.addEventListener("click", moveButton);
+
+function moveButton(){
+
+document.getElementById("funny").innerHTML =
+funnyMessages[funnyIndex];
+
+funnyIndex++;
+
+if(funnyIndex >= funnyMessages.length){
+
+funnyIndex = 0;
+
+}
+
+noBtn.style.position="absolute";
+
+noBtn.style.left=Math.random()*75+"vw";
+
+noBtn.style.top=Math.random()*75+"vh";
+
+}
+
+
+// =========================
+// YES Button
+// =========================
+
+function yesAnswer(){
+
+document.getElementById("questionScreen")
+.classList.remove("active");
+
+document.getElementById("finalScreen")
+.classList.add("active");
+
+startCelebration();
+
+showLoveMessage();
+
+}
+
+
+// =========================
+// Heart Explosion
+// =========================
+
+function startCelebration(){
+
+for(let i=0;i<120;i++){
+
+setTimeout(()=>{
+
+let h=document.createElement("div");
+
+h.innerHTML="❤️";
+
+h.className="heart";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.fontSize=(20+Math.random()*40)+"px";
+
+h.style.animationDuration=(3+Math.random()*3)+"s";
+
+document.body.appendChild(h);
+
+setTimeout(()=>{
+
+h.remove();
+
+},6000);
+
+},i*35);
+
+}
+
+}
+
+
+// =========================
+// Romantic Final Message
+// =========================
+
+function showLoveMessage(){
+
+document.querySelector(".finalText").innerHTML=`
+
+💖
+
+Thank You...
+
+for giving my heart
+
+another chance.
+
+<br><br>
+
+I know
+
+I cannot erase
+
+the mistakes
+
+I made,
+
+but I promise
+
+to become
+
+the reason
+
+behind your smile.
+
+<br><br>
+
+Every sunrise,
+
+I'll choose you.
+
+Every sunset,
+
+I'll love you
+
+a little more.
+
+<br><br>
+
+You're my peace.
+
+You're my happiness.
+
+You're my forever.
+
+❤️
+
+<br><br>
+
+I Love You
+
+More Than Yesterday
+
+But Less Than Tomorrow.
+
+❤️
+
+<br><br>
+
+Forever Yours
+
+❤️
+
+<b>Rahul</b>
+
+`;
+
+}
